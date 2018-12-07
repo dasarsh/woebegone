@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { EntryComponent } from './entry/entry.component';
 import { CalcKeypadComponent } from './calc-keypad/calc-keypad.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { CalcKeypadComponent } from './calc-keypad/calc-keypad.component';
     CalcKeypadComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
