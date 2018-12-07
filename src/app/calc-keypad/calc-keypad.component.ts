@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalcKeypadComponent implements OnInit {
 
-  constructor() { }
+  public input: string;
+
+  constructor() {
+    this.input = "";
+   }
 
   ngOnInit() {
+  }
+
+  click(input: string): void{
+    this.input += input;
+    console.log(this.input);
   }
 
 }
