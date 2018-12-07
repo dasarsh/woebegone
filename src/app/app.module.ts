@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { EntryComponent } from './entry/entry.component';
+import { CalcKeypadComponent } from './calc-keypad/calc-keypad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryComponent
+    EntryComponent,
+    CalcKeypadComponent
   ],
   imports: [
     BrowserModule
