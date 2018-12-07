@@ -1,5 +1,14 @@
-:host /deep/ #keypad-row div {
+@import "../shared/variables";
+
+#keypad-row div {
     display: inline;
     margin: 0 1em 0 1em;
     width: 30%;
+}
+
+.keypad{
+  &-button{    
+    border: skyblue 3px solid;
+    padding: 2px;
   }
+}
