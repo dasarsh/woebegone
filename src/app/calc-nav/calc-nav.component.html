@@ -1,0 +1,24 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>woebegone</span>
+    </mat-toolbar>
+    <div class="content">
+      <div layout="row" layout-align="center center" style="min-height: 200px">
+          <app-calc-screen></app-calc-screen>
+          <app-calc-keypad></app-calc-keypad>
+      </div>
+      <div layout="row" layout-align="center center" style="min-height: 200px">
+          <app-calc-links></app-calc-links>
+      </div>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
