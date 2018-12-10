@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Math from 'mathjs';
 
 @Component({
   selector: 'app-calc-keypad',
@@ -17,8 +18,12 @@ export class CalcKeypadComponent implements OnInit {
   }
 
   click(input: string): void{
-    this.input += input;
-    console.log(this.input);
+    if(input === "="){
+      var result = Math.eval(this.input);
+      console.log(result);
+    }else{
+      this.input += input;
+      console.log(this.input);
+    }
   }
-
 }

@@ -16,6 +16,7 @@ import {  MatToolbarModule,
           MatListModule,
           MatCardModule
         } from '@angular/material';
+import { MathNode } from 'mathjs';
 
 
 @NgModule({
