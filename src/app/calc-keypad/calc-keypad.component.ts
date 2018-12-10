@@ -12,16 +12,18 @@ export class CalcKeypadComponent implements OnInit {
 
   constructor() {
     this.input = "";
-   }
+  }
 
   ngOnInit() {
   }
 
-  click(input: string): void{
-    if(input === "="){
+  click(input: string): void {
+    if (input === "=") {
       var result = Math.eval(this.input);
       console.log(result);
-    }else{
+    } else if (input === "CE") {
+      this.input = "";
+    } else {
       this.input += input;
       console.log(this.input);
     }
