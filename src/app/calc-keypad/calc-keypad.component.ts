@@ -20,12 +20,15 @@ export class CalcKeypadComponent implements OnInit {
   click(input: string): void {
     if (input === "=") {
       var result = Math.eval(this.input);
-      console.log(result);
+      this.resetInput();
     } else if (input === "CE") {
-      this.input = "";
+      this.resetInput();
     } else {
       this.input += input;
-      console.log(this.input);
     }
+  }
+
+  resetInput(): void{
+    this.input = "";
   }
 }
