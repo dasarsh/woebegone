@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalcScreenComponent implements OnInit {
 
-  constructor() { }
+  public value: string;
+
+  constructor() { 
+    this.value = "10";
+  }
 
   ngOnInit() {
   }
