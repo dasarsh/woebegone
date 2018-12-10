@@ -6,9 +6,14 @@ import * as Math from 'mathjs';
 })
 export class QuickMathService {
 
-  constructor() { }
+  public result: any;
+
+  constructor() { 
+    this.result = 0;
+  }
 
   evaluateExpression(expression: string): any{
-    return Math.eval(expression);
+    this.result = Math.eval(expression);
+    return this.result;
   }
 }
