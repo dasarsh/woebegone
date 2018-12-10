@@ -2,13 +2,15 @@
 
 #keypad-row div {
     display: inline;
-    margin: 0 1em 0 1em;
+    margin: 1em 1em 1em 1em;
     width: 30%;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .keypad{
   &-button{    
     border: skyblue 3px solid;
-    padding: 2px;
+    margin: 5px;
   }
 }
