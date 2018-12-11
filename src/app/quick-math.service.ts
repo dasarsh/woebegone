@@ -9,15 +9,21 @@ export class QuickMathService {
   public display: string;
   public expression: string;
   public newExpression: boolean;
+  public enableCallButton: boolean;
 
   constructor() {
     this.display = "0";
     this.expression = "";
     this.newExpression = true;
+    this.enableCallButton = false;
   }
 
   evaluateExpression(): void {
-    this.display = Math.eval(this.expression) + "";
+    var result = Math.eval(this.expression);
+    this.display = result + "";
+    if(result > 0){
+      this.enableCallButton = true;
+    }
     this.expression = "0";
     this.newExpression = true;
   }

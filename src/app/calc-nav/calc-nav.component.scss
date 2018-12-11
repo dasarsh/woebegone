@@ -43,8 +43,14 @@
     width: 100%;
     &-symbol{
       &.equals{
-        color: white;
-        background-color: $primary;
+        &.enabled{
+          color: white;
+          background-color: $primary;
+        }
+        &.disabled{
+          color: $dark;
+          background-color: $gray;
+        }
       }
       background-color: lighten($gray, 30%);
     }

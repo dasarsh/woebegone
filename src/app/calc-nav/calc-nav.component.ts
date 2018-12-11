@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { QuickMathService } from '../quick-math.service';
 
 @Component({
   selector: 'app-calc-nav',
@@ -14,7 +15,7 @@ export class CalcNavComponent {
     .pipe(
       map(result => result.matches)
     );
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private quickMathService: QuickMathService) {}
 
   call(): void{
   }
