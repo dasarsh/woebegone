@@ -21,7 +21,7 @@ export class CalcKeypadComponent implements OnInit {
     if (input === "=") {
       var result = Math.eval(this.input);
       this.resetInput();
-    } else if (input === "CE") {
+    } else if (input === "AC") {
       this.resetInput();
     } else {
       this.input += input;
