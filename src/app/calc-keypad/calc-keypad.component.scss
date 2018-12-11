@@ -1,16 +1,31 @@
 @import "../shared/variables";
 
-#keypad-row div {
-    display: inline;
+#keypad, .keypad{
+  &-row, &-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  &div,  {
     margin: 1em 1em 1em 1em;
     width: 30%;
     border-radius: 5px;
     margin-bottom: 5px;
+  } 
+}
 }
 
 .keypad{
   &-button{    
-    border: skyblue 3px solid;
+    border: skyblue 1px solid;
     margin: 5px;
+    min-width: 35px;
+    &-symbol{
+      &.equals{
+        color: white;
+        background-color: $primary;
+      }
+      background-color: lighten($gray, 30%);
+    }
   }
 }
