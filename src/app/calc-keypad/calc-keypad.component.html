@@ -1,5 +1,11 @@
 <div>
   <div id="keypad-row">
+    <div class="keypad-button" (click)="click('(')">(</div>
+    <div class="keypad-button" (click)="click(')')">)</div>
+    <div class="keypad-button" (click)="click('%')">%</div>
+    <div class="keypad-button" (click)="click('AC')">AC</div>
+  </div>
+  <div id="keypad-row">
     <div class="keypad-button" (click)="click('7')">7</div>
     <div class="keypad-button" (click)="click('8')">8</div>
     <div class="keypad-button" (click)="click('9')">9</div>
@@ -22,8 +28,5 @@
     <div class="keypad-button" (click)="click('.')">.</div>
     <div class="keypad-button" (click)="click('=')">=</div>
     <div class="keypad-button" (click)="click('+')">+</div>
-  </div>
-  <div id="keypad-row">
-    <div class="keypad-button" (click)="click('CE')">CE</div>
   </div>
 </div>
