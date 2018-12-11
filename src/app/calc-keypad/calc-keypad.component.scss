@@ -19,5 +19,13 @@
   &-button{    
     border: skyblue 1px solid;
     margin: 5px;
+    min-width: 35px;
+    &-symbol{
+      &.equals{
+        color: white;
+        background-color: $primary;
+      }
+      background-color: lighten($gray, 30%);
+    }
   }
 }

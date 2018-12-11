@@ -10,38 +10,52 @@ export class QuickMathService {
   public expression: string;
   public newExpression: boolean;
 
-  constructor() { 
+  constructor() {
     this.display = "0";
     this.expression = "";
     this.newExpression = true;
   }
 
-  evaluateExpression(): void{
+  evaluateExpression(): void {
     this.display = Math.eval(this.expression) + "";
     this.expression = "0";
     this.newExpression = true;
   }
 
-  addToExpression(input: string): void{
-    if(this.newExpression){
-      this.expression = input;
+  addToExpression(input: string): void {
+    if (this.newExpression) {
+      if (this.inputIsOperator(input)) {
+        return;
+      }
+      if (input === ".") {
+        this.expression = "0.";
+      } else {
+        this.expression = input;
+      }
       this.newExpression = false;
-    }else{
+    } else {
       this.expression += input;
     }
     this.display = this.expression;
     this.parseExpression();
   }
 
-  resetExpression(): void{
+  resetExpression(): void {
     this.display = "0";
     this.expression = "0";
   }
 
-  parseExpression(): void{
+  parseExpression(): void {
     var reMult = /[*]/gi;
     var reDiv = /[/]/gi;
     this.display = this.display.replace(reMult, "×");
     this.display = this.display.replace(reDiv, "÷");
+  }
+
+  inputIsOperator(input: string): boolean {
+    if (input === "+" || input === "-" || input === "*" || input === "/" || input === "%" || input === "=") {
+      return true;
+    }
+    return false;
   }
 }

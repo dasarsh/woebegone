@@ -1,5 +1,19 @@
 <table class="keypad-table">
   <tbody>
+      <tr id="keypad-row">
+        <td>
+          <button class="keypad-button keypad-button-symbol" (click)="click('(')">(</button>
+        </td>
+        <td>
+          <button class="keypad-button keypad-button-symbol" (click)="click(')')">)</button>
+        </td>
+        <td>
+          <button class="keypad-button keypad-button-symbol" (click)="click('%')">%</button>
+        </td>
+        <td>
+          <button class="keypad-button keypad-button-symbol" (click)="click('AC')">AC</button>
+        </td>
+      </tr>
     <tr id="keypad-row">
       <td>
         <button class="keypad-button" (click)="click('7')">7</button>
@@ -11,7 +25,7 @@
         <button class="keypad-button" (click)="click('9')">9</button>
       </td>
       <td>
-        <button class="keypad-button" (click)="click('/')">÷</button>
+        <button class="keypad-button keypad-button-symbol" (click)="click('/')">÷</button>
       </td>
     </tr>
     <tr id="keypad-row">
@@ -25,7 +39,7 @@
         <button class="keypad-button" (click)="click('6')">6</button>
       </td>
       <td>
-        <button class="keypad-button" (click)="click('*')">×</button>
+        <button class="keypad-button keypad-button-symbol" (click)="click('*')">×</button>
       </td>
     </tr>
     <tr id="keypad-row">
@@ -39,7 +53,7 @@
         <button class="keypad-button" (click)="click('3')">3</button>
       </td>
       <td>
-        <button class="keypad-button" (click)="click('-')">-</button>
+        <button class="keypad-button keypad-button-symbol" (click)="click('-')">-</button>
       </td>
     </tr>
     <tr id="keypad-row">
@@ -47,18 +61,13 @@
         <button class="keypad-button" (click)="click('0')">0</button>
       </td>
       <td>
-        <button class="keypad-button" (click)="click('.')">.</button>
+        <button class="keypad-button keypad-button-symbol" (click)="click('.')">.</button>
       </td>
       <td>
-        <button class="keypad-button" (click)="click('=')">=</button>
+        <button class="keypad-button keypad-button-symbol equals" (click)="click('=')">=</button>
       </td>
       <td>
-        <button class="keypad-button" (click)="click('+')">+</button>
-      </td>
-    </tr>
-    <tr id="keypad-row">
-      <td>
-        <button class="keypad-button" (click)="click('CE')">CE</button>
+        <button class="keypad-button keypad-button-symbol" (click)="click('+')">+</button>
       </td>
     </tr>
   </tbody>
