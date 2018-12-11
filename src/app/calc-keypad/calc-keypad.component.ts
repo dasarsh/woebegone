@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Math from 'mathjs';
+import { QuickMathService } from '../quick-math.service';
 
 @Component({
   selector: 'app-calc-keypad',
@@ -10,7 +10,7 @@ export class CalcKeypadComponent implements OnInit {
 
   public input: string;
 
-  constructor() {
+  constructor(private quickMathService: QuickMathService) {
     this.input = "";
   }
 
@@ -19,12 +19,13 @@ export class CalcKeypadComponent implements OnInit {
 
   click(input: string): void {
     if (input === "=") {
-      var result = Math.eval(this.input);
-      this.resetInput();
+      this.quickMathService.evaluateExpression();
+      // this.quickMathService.resetExpression();
     } else if (input === "AC") {
-      this.resetInput();
+      this.quickMathService.resetExpression();
     } else {
-      this.input += input;
+      // this.input += input;
+      this.quickMathService.addToExpression(input);
     }
   }
 

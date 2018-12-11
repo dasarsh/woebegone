@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuickMathService } from '../quick-math.service';
 
 @Component({
   selector: 'app-calc-screen',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalcScreenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private quickMathService: QuickMathService) {
+  }
 
   ngOnInit() {
   }
