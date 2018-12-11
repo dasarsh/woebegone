@@ -1,3 +1,5 @@
+@import "../shared/variables";
+
 .sidenav-container {
   height: 100%;
 }
@@ -31,5 +33,27 @@
     &-item{
       width: 300px !important;
     }    
+  }
+}
+
+.keypad{
+  &-button{    
+    border: skyblue 1px solid;
+    margin: 5px;
+    min-width: 35px;
+    width: 100%;
+    &-symbol{
+      &.equals{
+        &.enabled{
+          color: white;
+          background-color: $primary;
+        }
+        &.disabled{
+          color: $dark;
+          background-color: $gray;
+        }
+      }
+      background-color: lighten($gray, 30%);
+    }
   }
 }
