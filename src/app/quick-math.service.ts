@@ -27,7 +27,11 @@ export class QuickMathService {
       if(this.inputIsOperator(input)){
         return;
       }
-      this.expression = input;
+      if(input === "."){
+        this.expression = "0.";
+      }else{
+        this.expression = input;
+      }
       this.newExpression = false;
     }else{
       this.expression += input;
