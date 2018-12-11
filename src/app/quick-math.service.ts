@@ -30,10 +30,18 @@ export class QuickMathService {
       this.expression += input;
     }
     this.display = this.expression;
+    this.parseExpression();
   }
 
   resetExpression(): void{
     this.display = "0";
     this.expression = "0";
+  }
+
+  parseExpression(): void{
+    var reMult = /[*]/gi;
+    var reDiv = /[/]/gi;
+    this.display = this.display.replace(reMult, "×");
+    this.display = this.display.replace(reDiv, "÷");
   }
 }
