@@ -19,12 +19,13 @@ export class CalcKeypadComponent implements OnInit {
 
   click(input: string): void {
     if (input === "=") {
-      this.quickMathService.evaluateExpression(this.input);
-      this.resetInput();
+      this.quickMathService.evaluateExpression();
+      // this.quickMathService.resetExpression();
     } else if (input === "CE") {
-      this.resetInput();
+      this.quickMathService.resetExpression();
     } else {
-      this.input += input;
+      // this.input += input;
+      this.quickMathService.addToExpression(input);
     }
   }
 

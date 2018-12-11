@@ -6,14 +6,34 @@ import * as Math from 'mathjs';
 })
 export class QuickMathService {
 
-  public result: any;
+  public display: string;
+  public expression: string;
+  public newExpression: boolean;
 
   constructor() { 
-    this.result = 0;
+    this.display = "0";
+    this.expression = "";
+    this.newExpression = true;
   }
 
-  evaluateExpression(expression: string): any{
-    this.result = Math.eval(expression);
-    return this.result;
+  evaluateExpression(): void{
+    this.display = Math.eval(this.expression) + "";
+    this.expression = "0";
+    this.newExpression = true;
+  }
+
+  addToExpression(input: string): void{
+    if(this.newExpression){
+      this.expression = input;
+      this.newExpression = false;
+    }else{
+      this.expression += input;
+    }
+    this.display = this.expression;
+  }
+
+  resetExpression(): void{
+    this.display = "0";
+    this.expression = "0";
   }
 }
