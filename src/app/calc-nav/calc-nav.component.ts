@@ -16,4 +16,6 @@ export class CalcNavComponent {
     );
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  call(): void{
+  }
 }
