@@ -17,7 +17,7 @@
 
 .keypad{
   &-button{    
-    border: skyblue 1px solid;
+    border: $skyblue 1px solid;
     margin: 5px;
     min-width: 35px;
     &-symbol{
@@ -26,6 +26,10 @@
         background-color: $primary;
       }
       background-color: lighten($gray, 30%);
+    }
+    &:active{
+      box-shadow: 0 2px darken($skyblue, 20%);
+      transform: translateY(2px);
     }
   }
 }
