@@ -24,6 +24,9 @@ export class QuickMathService {
 
   addToExpression(input: string): void{
     if(this.newExpression){
+      if(this.inputIsOperator(input)){
+        return;
+      }
       this.expression = input;
       this.newExpression = false;
     }else{
@@ -43,5 +46,12 @@ export class QuickMathService {
     var reDiv = /[/]/gi;
     this.display = this.display.replace(reMult, "×");
     this.display = this.display.replace(reDiv, "÷");
+  }
+
+  inputIsOperator(input: string): boolean{
+    if(input === "+" || input === "-" || input === "*" || input === "/" || input === "%" || input === "="){
+      return true;
+    }
+    return false;
   }
 }
