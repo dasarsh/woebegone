@@ -7,12 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
+  public jsonData = [];
+
   constructor(private http: HttpClient) {
   }
 
   public get<T>(): void {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    fetch('https://www.reddit.com/r/tifu.json')
       .then(response => response.json())
-      .then(json => console.log(json))
+      .then(json => this.jsonData = json)
+
+      console.log(this.jsonData);
   }
 }
