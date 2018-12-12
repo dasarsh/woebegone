@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,8 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  public get<T>(): void {
-    fetch('https://www.reddit.com/r/tifu.json')
-      .then(response => response.json())
-      .then(json => this.jsonData = json)
-
-      console.log(this.jsonData);
+  public get(): Observable<JSON>{
+    var result = this.http.get<JSON>("https://www.reddit.com/r/tifu.json");
+    return result;
   }
 }

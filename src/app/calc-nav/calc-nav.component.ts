@@ -12,6 +12,8 @@ import { ApiService } from '../api.service';
 })
 export class CalcNavComponent {
 
+  public jsonData: any;
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
@@ -19,6 +21,6 @@ export class CalcNavComponent {
   constructor(private breakpointObserver: BreakpointObserver, private quickMathService: QuickMathService, private apiService: ApiService) {}
 
   call(): void{
-    var result = this.apiService.get();
+    this.apiService.get().subscribe(json => this.jsonData = json);
   }
 }
