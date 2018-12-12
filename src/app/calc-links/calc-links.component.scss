@@ -12,10 +12,16 @@
   }
   &-item{
     box-shadow: $gray 2px 2px 2px ;
-    button{
-      color: black;
+    margin-bottom: 20px;
+    .tag{
+      color: white;
+      background: $gray;
+      margin: 1px;
+      border-radius: 15px;
+      line-height: 15px;
+      padding: 5px;
       &.nsfw{
-        color: $danger;
+        background: $danger;
       }
     }
   } 
