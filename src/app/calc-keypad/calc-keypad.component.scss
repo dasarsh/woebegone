@@ -19,7 +19,7 @@
   &-button{    
     border: $skyblue 1px solid;
     margin: 5px;
-    min-width: 35px;
+    min-width: 45px;
     &-symbol{
       &.equals{
         color: white;
@@ -28,7 +28,7 @@
       background-color: lighten($gray, 30%);
     }
     &:active{
-      box-shadow: 0 2px darken($skyblue, 20%);
+      box-shadow: 0 2px $gray;
       transform: translateY(2px);
     }
   }

@@ -1,4 +1,4 @@
-@import "../shared/variables";
+@import "../shared/_variables.scss";
 
 .calc-links{
     text-align: left; 
@@ -6,6 +6,17 @@
     border: skyblue 3px solid;
 }
 
-.mat-list-icon {
-  color: rgba(0, 0, 0, 0.54);
+.mat-list{
+  &-icon {
+    color: $gray;
+  }
+  &-item{
+    box-shadow: $gray 2px 2px 2px ;
+    button{
+      color: black;
+      &.nsfw{
+        color: $danger;
+      }
+    }
+  } 
 }
