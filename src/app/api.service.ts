@@ -12,7 +12,7 @@ export class ApiService {
 
   public getAll<T>(): void {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json))
+      .then(response => response.json())
+      .then(json => console.log(json))
   }
 }
