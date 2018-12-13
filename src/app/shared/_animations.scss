@@ -1,0 +1,16 @@
+@keyframes pulse {
+    0% {
+      background: $tile-bg;
+      transform: scale(1);
+    }
+    
+    25% {
+      background: darken($tile-bg, 10%);
+      transform: scale(1.015);
+    }
+    
+    50% {
+      background: $tile-bg;
+      transform: scale(1);
+    }
+  }

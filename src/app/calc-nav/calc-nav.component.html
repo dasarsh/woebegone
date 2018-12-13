@@ -12,8 +12,7 @@
         <app-calc-keypad></app-calc-keypad>
       </div>
       <div>
-        <div *ngIf="quickMathService.enableCallButton"><button class="keypad-button keypad-button-symbol equals enabled" enabled (click)="call()">Click to call</button></div>
-        <div *ngIf="!quickMathService.enableCallButton"><button class="keypad-button keypad-button-symbol equals disabled" disabled>Click to call</button></div>
+        <div><button class="keypad-button keypad-button-symbol equals" [disabled]="!quickMathService.enableCallButton" (click)="call()">Click to call</button></div>
         <app-calc-links></app-calc-links>
       </div>
     </div>

@@ -44,11 +44,11 @@
     width: 100%;
     &-symbol{
       &.equals{
-        &.enabled{
+        &:enabled{
           color: white;
           background-color: $primary;
         }
-        &.disabled{
+        &:disabled{
           color: $dark;
           background-color: $gray;
         }
