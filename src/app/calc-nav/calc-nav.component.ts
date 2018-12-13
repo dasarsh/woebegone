@@ -22,5 +22,6 @@ export class CalcNavComponent {
 
   call(): void{
     this.apiService.get().subscribe(json => this.jsonData = json);
+    console.log(this.jsonData);
   }
 }
