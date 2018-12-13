@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 export interface Section {
   name: string;
@@ -41,7 +42,7 @@ export class CalcLinksComponent implements OnInit {
       tag: 'nsfw',
     }
   ];
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
   }
