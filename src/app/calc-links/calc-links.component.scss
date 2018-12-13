@@ -18,8 +18,9 @@
       background: $gray;
       margin: 1px;
       border-radius: 15px;
-      line-height: 15px;
-      padding: 5px;
+      line-height: 10px;
+      font-size: 10px;
+      padding: 3px;
       &.nsfw{
         background: $danger;
       }
