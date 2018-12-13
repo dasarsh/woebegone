@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
 
 export interface Section {
   name: string;
@@ -42,7 +42,12 @@ export class CalcLinksComponent implements OnInit {
       tag: 'nsfw',
     }
   ];
-  constructor(private apiService: ApiService) { }
+
+  @Input() jsonData: Observable<JSON>;
+
+  constructor() { 
+    
+  }
 
   ngOnInit() {
   }
