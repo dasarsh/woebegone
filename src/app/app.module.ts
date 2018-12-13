@@ -17,6 +17,7 @@ import {  MatToolbarModule,
           MatCardModule
         } from '@angular/material';
 import { MathNode } from 'mathjs';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MathNode } from 'mathjs';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
