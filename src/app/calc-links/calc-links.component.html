@@ -1,13 +1,10 @@
 <mat-list>
   <h3 mat-subheader>Links</h3>
   <mat-list-item *ngFor="let folder of folders">
-    <mat-icon matBadge="15" matBadgeColor="warn">link</mat-icon>
-    <h4 mat-line>{{folder.name}}</h4>
-    <p mat-line> {{folder.updated | date}} </p>
-    <p mat-line> 
-      <mat-icon matBadge="15" matBadgeColor="warn">unfold_more</mat-icon>
-      {{folder.upvotes}} 
-    </p>
+    <h4 mat-line><a href="{{folder.link}}">{{folder.name}}</a></h4>
+    <p mat-line> {{folder.updated | date}} </p>    
+    <br/>
+    <div class="tag" [ngClass]="folder.nsfw ? 'nsfw' : ''" label="Favorite">{{folder.tag}}</div>
   </mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>
