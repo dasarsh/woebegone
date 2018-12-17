@@ -30,6 +30,16 @@
   font-size: 24px;
   transform: translate(-50%, -50%);
 }
+.vertical-break{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-left:1px solid lighten($gray, 20%);
+  height:400px
+}
+.panel{
+  margin-top: 20px;
+}
+
 :host /deep/ .mat{
   &-list{
     flex-grow: 1;
@@ -39,9 +49,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     margin-left: 5px;
-    margin-top: 10px;
     @include scrollbars(.5em, slategray);
-    margin-left: 5px;
     &-item{
       width: 300px !important;
     }    
@@ -77,6 +85,7 @@
     border: skyblue 1px solid;
     min-width: 300px;
     width: 100%;
+    padding: 2px;
     margin-left: 5px;
     margin-bottom: 15px;
     &:enabled{
