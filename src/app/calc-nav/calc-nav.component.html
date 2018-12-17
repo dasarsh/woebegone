@@ -13,7 +13,7 @@
       </div>
       <div>
         <div><button class="keypad-button keypad-button-symbol equals" [disabled]="!quickMathService.enableCallButton" (click)="call()">Click to call</button></div>
-        <app-calc-links></app-calc-links>
+        <app-calc-links [jsonData]="jsonData"></app-calc-links>
       </div>
     </div>
   </mat-sidenav-content>

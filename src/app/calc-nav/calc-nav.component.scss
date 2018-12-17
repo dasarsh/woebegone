@@ -1,5 +1,6 @@
 @import "../shared/variables";
 @import "../shared/animations";
+@import "../shared/common";
 
 .sidenav-container {
   height: 100%;
@@ -33,7 +34,11 @@
   &-list{
     flex-grow: 1;
     border: skyblue 1px solid;
-    overflow: auto;
+    overflow: scroll;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    @include scrollbars(.5em, slategray);
     &-item{
       width: 300px !important;
     }    
