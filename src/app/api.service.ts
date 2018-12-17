@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Section } from './calc-links/calc-links.component';
+import { Section } from './section';
 
 @Injectable({
   providedIn: 'root'
