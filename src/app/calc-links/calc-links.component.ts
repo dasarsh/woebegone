@@ -39,6 +39,14 @@ export class CalcLinksComponent implements OnInit {
       link: new URL('https://www.google.com'),
       nsfw: true,
       tag: 'nsfw',
+    },
+    {
+      name: 'Link 4',
+      updated: new Date('2/8/22'),
+      upvotes: 10102,
+      link: new URL('https://www.google.com'),
+      nsfw: true,
+      tag: 'nsfw',
     }
   ];
   constructor() { }
