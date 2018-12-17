@@ -12,7 +12,9 @@
         <app-calc-keypad></app-calc-keypad>
       </div>
       <div>
-        <div><button class="keypad-button keypad-button-symbol equals" [disabled]="!quickMathService.enableCallButton" (click)="call()">Click to call</button></div>
+        <button class="action-button" [disabled]="!quickMathService.enableCallButton" (click)="call()">
+          Click to call
+        </button>
         <app-calc-links [jsonData]="jsonData"></app-calc-links>
       </div>
     </div>
