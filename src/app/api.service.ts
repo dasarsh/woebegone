@@ -27,7 +27,7 @@ export class ApiService {
       // console.log(child.data.url);
       // console.log(child.data.created);
       this.sections.push(
-        new Section(child.data.subreddit, new Date(child.data.created * 1000), child.data.url, child.data.over_18 == true)
+        new Section(child.data.title, new Date(child.data.created * 1000), child.data.url, child.data.over_18 == true, child.data.subreddit)
       );
     });
   }
