@@ -30,14 +30,25 @@
   font-size: 24px;
   transform: translate(-50%, -50%);
 }
+.vertical-break{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-left:1px solid lighten($gray, 20%);
+  height:400px
+}
+.panel{
+  margin-top: 20px;
+}
+
 :host /deep/ .mat{
   &-list{
     flex-grow: 1;
     border: skyblue 1px solid;
-    overflow: scroll;
     min-height: 300px;
     max-height: 300px;
     overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 5px;
     @include scrollbars(.5em, slategray);
     &-item{
       width: 300px !important;
@@ -53,6 +64,7 @@
     width: 100%;
     &-symbol{
       &.equals{
+        margin-left: 5px;
         &:enabled{
           color: white;
           background-color: $primary;
@@ -65,5 +77,26 @@
       }
       background-color: lighten($gray, 30%);
     }
+  }
+}
+
+.action{
+  &-button{    
+    border: skyblue 1px solid;
+    min-width: 300px;
+    width: 100%;
+    padding: 2px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    &:enabled{
+      color: white;
+      background-color: $primary;
+      @include pulseBorder;
+    }
+    &:disabled{
+      color: $dark;
+      background-color: $gray;
+    }
+    background-color: lighten($gray, 30%);
   }
 }

@@ -7,12 +7,15 @@
       <span>woebegone</span>
     </mat-toolbar>
     <div class="content" layout="row" layout-align="center center">
-      <div>
+      <div class="panel panel-left">
         <app-calc-screen></app-calc-screen>
         <app-calc-keypad></app-calc-keypad>
       </div>
-      <div>
-        <div><button class="keypad-button keypad-button-symbol equals" [disabled]="!quickMathService.enableCallButton" (click)="call()">Click to call</button></div>
+      <div class="vertical-break"></div>
+      <div class="panel panel-right">
+        <button class="action-button" [disabled]="!quickMathService.enableCallButton" (click)="call()">
+          Click to call
+        </button>
         <app-calc-links [jsonData]="jsonData"></app-calc-links>
       </div>
     </div>
