@@ -1,4 +1,6 @@
 @import "../shared/variables";
+@import "../shared/animations";
+@import "../shared/common";
 
 .sidenav-container {
   height: 100%;
@@ -30,6 +32,13 @@
 }
 :host /deep/ .mat{
   &-list{
+    flex-grow: 1;
+    border: skyblue 1px solid;
+    overflow: scroll;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    @include scrollbars(.5em, slategray);
     &-item{
       width: 300px !important;
     }    
@@ -40,15 +49,16 @@
   &-button{    
     border: skyblue 1px solid;
     margin: 5px;
-    min-width: 35px;
+    min-width: 300px;
     width: 100%;
     &-symbol{
       &.equals{
-        &.enabled{
+        &:enabled{
           color: white;
           background-color: $primary;
+          @include pulseBorder;
         }
-        &.disabled{
+        &:disabled{
           color: $dark;
           background-color: $gray;
         }
