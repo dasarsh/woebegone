@@ -9,9 +9,7 @@ import { Section } from './section';
 export class ApiService {
 
   public jsonData: any;
-  public sections: Section[] = [
-    new Section("Wanna do some math?", new Date(), new URL("https://www.reddit.com/r/popular.json"), false)
-  ];
+  public sections: Section[] = [];
 
   constructor(private http: HttpClient) {
     this.get().subscribe(json => this.jsonData = json);
