@@ -21,6 +21,6 @@ export class CalcNavComponent {
   constructor(private breakpointObserver: BreakpointObserver, private quickMathService: QuickMathService, private apiService: ApiService) {}
 
   call(): void{
-    this.apiService.get().subscribe(json => this.jsonData = json);
+    this.apiService.processJson();
   }
 }
