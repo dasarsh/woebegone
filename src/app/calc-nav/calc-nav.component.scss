@@ -34,10 +34,12 @@
   &-list{
     flex-grow: 1;
     border: skyblue 1px solid;
-    overflow: scroll;
     min-height: 300px;
     max-height: 300px;
     overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 5px;
+    margin-top: 10px;
     @include scrollbars(.5em, slategray);
     margin-left: 5px;
     &-item{
