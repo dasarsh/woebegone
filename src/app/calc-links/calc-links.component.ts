@@ -12,7 +12,7 @@ export class CalcLinksComponent implements OnInit {
 
   @Input() jsonData: any;
 
-  constructor(private apiService: ApiService) { 
+  constructor(private apiService: ApiService) {
     this.folders = apiService.sections;
   }
 

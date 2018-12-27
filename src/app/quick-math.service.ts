@@ -12,19 +12,19 @@ export class QuickMathService {
   public enableCallButton: boolean;
 
   constructor() {
-    this.display = "0";
-    this.expression = "";
+    this.display = '0';
+    this.expression = '';
     this.newExpression = true;
     this.enableCallButton = false;
   }
 
   evaluateExpression(): void {
-    var result = Math.eval(this.expression);
-    this.display = result + "";
-    if(result > 0){
+    const result = Math.eval(this.expression);
+    this.display = result + '';
+    if (result > 0) {
       this.enableCallButton = true;
     }
-    this.expression = "0";
+    this.expression = '0';
     this.newExpression = true;
   }
 
@@ -33,8 +33,8 @@ export class QuickMathService {
       if (this.inputIsOperator(input)) {
         return;
       }
-      if (input === ".") {
-        this.expression = "0.";
+      if (input === '.') {
+        this.expression = '0.';
       } else {
         this.expression = input;
       }
@@ -47,19 +47,19 @@ export class QuickMathService {
   }
 
   resetExpression(): void {
-    this.display = "0";
-    this.expression = "0";
+    this.display = '0';
+    this.expression = '0';
   }
 
   parseExpression(): void {
-    var reMult = /[*]/gi;
-    var reDiv = /[/]/gi;
-    this.display = this.display.replace(reMult, "×");
-    this.display = this.display.replace(reDiv, "÷");
+    const reMult = /[*]/gi;
+    const reDiv = /[/]/gi;
+    this.display = this.display.replace(reMult, '×');
+    this.display = this.display.replace(reDiv, '÷');
   }
 
   inputIsOperator(input: string): boolean {
-    if (input === "+" || input === "-" || input === "*" || input === "/" || input === "%" || input === "=") {
+    if (input === '+' || input === '-' || input === '*' || input === '/' || input === '%' || input === '=') {
       return true;
     }
     return false;

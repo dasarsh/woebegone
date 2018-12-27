@@ -11,23 +11,23 @@ export class CalcKeypadComponent implements OnInit {
   public input: string;
 
   constructor(private quickMathService: QuickMathService) {
-    this.input = "";
+    this.input = '';
   }
 
   ngOnInit() {
   }
 
   click(input: string): void {
-    if (input === "=") {
+    if (input === '=') {
       this.quickMathService.evaluateExpression();
-    } else if (input === "AC") {
+    } else if (input === 'AC') {
       this.quickMathService.resetExpression();
     } else {
       this.quickMathService.addToExpression(input);
     }
   }
 
-  resetInput(): void{
-    this.input = "";
+  resetInput(): void {
+    this.input = '';
   }
 }
