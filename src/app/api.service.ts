@@ -16,7 +16,7 @@ export class ApiService {
   }
 
   public get(): Observable<JSON>{
-     var jsonData = this.http.get<JSON>("https://www.reddit.com/r/popular.json");
+    var jsonData = this.http.get<JSON>("https://www.reddit.com/r/popular.json");
     return jsonData;
   }
 
@@ -30,5 +30,11 @@ export class ApiService {
         new Section(child.data.title, new Date(child.data.created * 1000), child.data.url, child.data.over_18 == true, child.data.subreddit)
       );
     });
+    console.log(JSON.stringify(this.sections));
+  }
+
+  public clearSections(): void{
+    this.sections = [];
+    this.get().subscribe(json => this.jsonData = json);
   }
 }
