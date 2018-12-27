@@ -20,7 +20,7 @@ export class CalcNavComponent {
     );
   constructor(private breakpointObserver: BreakpointObserver, private quickMathService: QuickMathService, private apiService: ApiService) {}
 
-  call(): void{
+  call(): void {
     this.apiService.processJson();
   }
 }
