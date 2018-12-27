@@ -22,5 +22,6 @@ export class CalcNavComponent {
 
   call(): void{
     this.apiService.processJson();
+    this.apiService.clearSections();
   }
 }
