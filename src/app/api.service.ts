@@ -16,7 +16,7 @@ export class ApiService {
   }
 
   public get(): Observable<JSON> {
-     let jsonData = this.http.get<JSON>('https://www.reddit.com/r/popular.json');
+     const jsonData = this.http.get<JSON>('https://www.reddit.com/r/popular.json');
     return jsonData;
   }
 
