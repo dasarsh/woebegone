@@ -31,10 +31,9 @@ export class ApiService {
           child.data.url, child.data.over_18 === true, child.data.subreddit)
       );
     });
-    console.log(JSON.stringify(this.sections));
   }
 
-  public clearSections(): void{
+  public clearSections(): void {
     this.sections = [];
     this.get().subscribe(json => this.jsonData = json);
   }
