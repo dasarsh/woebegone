@@ -34,7 +34,7 @@ export class ApiService {
     console.log(JSON.stringify(this.sections));
   }
 
-  public clearSections(): void{
+  public clearSections(): void {
     this.sections = [];
     this.get().subscribe(json => this.jsonData = json);
   }
