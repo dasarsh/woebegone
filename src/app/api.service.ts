@@ -16,20 +16,23 @@ export class ApiService {
   }
 
   public get(): Observable<JSON> {
-     const jsonData = this.http.get<JSON>('https://www.reddit.com/r/popular.json');
+    const jsonData = this.http.get<JSON>('https://www.reddit.com/r/popular.json');
     return jsonData;
   }
 
-  public processJson(): void {
+  public processJson(limit: number): void {
     this.jsonData.data.children.forEach(child => {
       // console.log(child.data.subreddit);
       // console.log(child.data.over_18);
       // console.log(child.data.url);
       // console.log(child.data.created);
-      this.sections.push(
-        new Section(child.data.title, new Date(child.data.created * 1000),
-          child.data.url, child.data.over_18 === true, child.data.subreddit)
-      );
+      console.log('this.sections.length ' + this.sections.length + ', limit ' + limit);
+      if (this.sections.length < limit) {
+        this.sections.push(
+          new Section(child.data.title, new Date(child.data.created * 1000),
+            child.data.url, child.data.over_18 === true, child.data.subreddit)
+        );
+      }
     });
   }
 
