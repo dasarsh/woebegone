@@ -8,7 +8,7 @@ import { Section } from '../section';
   styleUrls: ['./calc-links.component.scss']
 })
 export class CalcLinksComponent implements OnInit {
-  folders: Section[];
+  @Input() links: Section[];
 
   constructor(private apiService: ApiService) {
   }
