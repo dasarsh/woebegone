@@ -12,7 +12,6 @@ export class ApiService {
   public sections: Section[] = [];
 
   constructor(private http: HttpClient) {
-    this.get().subscribe(json => this.jsonData = json);
   }
 
   public get(): Observable<JSON> {
@@ -21,23 +20,18 @@ export class ApiService {
   }
 
   public processJson(limit: number): void {
-    this.jsonData.data.children.forEach(child => {
-      // console.log(child.data.subreddit);
-      // console.log(child.data.over_18);
-      // console.log(child.data.url);
-      // console.log(child.data.created);
-      console.log('this.sections.length ' + this.sections.length + ', limit ' + limit);
-      if (this.sections.length < limit) {
-        this.sections.push(
-          new Section(child.data.title, new Date(child.data.created * 1000),
-            child.data.url, child.data.over_18 === true, child.data.subreddit)
-        );
-      }
-    });
-  }
+    this.get().subscribe(json => {
+      this.jsonData = json
 
-  public clearSections(): void {
-    this.sections = [];
-    this.get().subscribe(json => this.jsonData = json);
+      this.sections = [];
+      this.jsonData.data.children.forEach(child => {
+        if (this.sections.length < limit) {
+          this.sections.push(
+            new Section(child.data.title, new Date(child.data.created * 1000),
+              child.data.url, child.data.over_18 === true, child.data.subreddit)
+          );
+        }
+      });
+    });
   }
 }

@@ -10,10 +10,7 @@ import { Section } from '../section';
 export class CalcLinksComponent implements OnInit {
   folders: Section[];
 
-  @Input() jsonData: any;
-
   constructor(private apiService: ApiService) {
-    this.folders = apiService.sections;
   }
 
   ngOnInit() {

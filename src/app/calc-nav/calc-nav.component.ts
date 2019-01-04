@@ -23,6 +23,5 @@ export class CalcNavComponent {
   call(result: string): void {
     var number = Math.floor(+result);
     this.apiService.processJson(number);
-    this.apiService.clearSections();
   }
 }
