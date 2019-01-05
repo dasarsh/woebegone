@@ -13,10 +13,10 @@
       </div>
       <div class="vertical-break"></div>
       <div class="panel panel-right">
-        <button class="action-button" mat-stroked-button [disabled]="!quickMathService.enableCallButton" (click)="call()">
+        <button class="action-button" mat-stroked-button [disabled]="!quickMathService.enableCallButton" (click)="call(quickMathService.display)">
           Surprise me
         </button>
-        <app-calc-links [jsonData]="jsonData"></app-calc-links>
+        <app-calc-links [links]="apiService.sections"></app-calc-links>
       </div>
     </div>
   </mat-sidenav-content>
