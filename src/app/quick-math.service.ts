@@ -49,6 +49,7 @@ export class QuickMathService {
   resetExpression(): void {
     this.display = '0';
     this.expression = '0';
+    this.enableCallButton = false;
   }
 
   parseExpression(): void {
