@@ -8,7 +8,10 @@ import { QuickMathService } from '../quick-math.service';
 })
 export class CalcScreenComponent implements OnInit {
 
+  public service: QuickMathService;
+
   constructor(private quickMathService: QuickMathService) {
+    this.service = quickMathService;
   }
 
   ngOnInit() {
