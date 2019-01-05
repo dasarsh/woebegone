@@ -1,0 +1,35 @@
+@import "../shared/variables";
+
+#keypad, .keypad{
+  &-row, &-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  &div,  {
+    margin: 1em 1em 1em 1em;
+    width: 30%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  } 
+}
+}
+
+.keypad{
+  &-button{    
+    border: $skyblue 1px solid;
+    margin: 5px;
+    min-width: 45px;
+    &-symbol{
+      &.equals{
+        color: white;
+        background-color: $purple;
+      }
+      background-color: lighten($gray, 30%);
+    }
+    &:active{
+      box-shadow: 0 2px $gray;
+      transform: translateY(2px);
+    }
+  }
+}

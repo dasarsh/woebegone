@@ -1,0 +1,10 @@
+@import "../shared/variables";
+
+.calc-screen{
+    text-align: right; 
+    border: $skyblue 2px solid;
+    margin-bottom: 10px;
+    padding-right: 5px;
+    width: 220px;
+    min-width: 220px;
+}
