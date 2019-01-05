@@ -21,7 +21,7 @@ export class ApiService {
 
   public processJson(limit: number): void {
     this.get().subscribe(json => {
-      this.jsonData = json
+      this.jsonData = json;
 
       this.sections = [];
       this.jsonData.data.children.forEach(child => {

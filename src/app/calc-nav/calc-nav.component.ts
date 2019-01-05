@@ -18,10 +18,12 @@ export class CalcNavComponent {
     .pipe(
       map(result => result.matches)
     );
-  constructor(private breakpointObserver: BreakpointObserver, private quickMathService: QuickMathService, private apiService: ApiService) { }
+  constructor(private breakpointObserver: BreakpointObserver,
+              private quickMathService: QuickMathService,
+              private apiService: ApiService) { }
 
   call(result: string): void {
-    var number = Math.floor(+result);
+    const number = Math.floor(+result);
     this.apiService.processJson(number);
   }
 }
