@@ -9,7 +9,7 @@
 .card-list{  
   max-height: $section-height;
   min-height: $section-height;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
