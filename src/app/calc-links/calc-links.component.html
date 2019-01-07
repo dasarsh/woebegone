@@ -1,7 +1,9 @@
 <div class="card-list">
   <mat-card *ngFor="let folder of links">
     <mat-card-header>
-    <mat-card-title mat-line><a href="{{folder.link}}" target="_blank">{{folder.name}}</a></mat-card-title>
+    <mat-card-title mat-line matTooltip="{{folder.name}}" matTooltipPosition="above">
+      <a href="{{folder.link}}" target="_blank">{{folder.name}}</a>
+    </mat-card-title>
     <mat-card-subtitle mat-line> {{folder.updated | date}} {{folder.updated | date:'shortTime'}} </mat-card-subtitle>    
     <br/>
     </mat-card-header>
