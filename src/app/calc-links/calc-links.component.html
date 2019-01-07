@@ -1,9 +1,14 @@
-<mat-list>
-  <mat-list-item *ngFor="let folder of links">
-    <h4 mat-line><a href="{{folder.link}}" target="_blank">{{folder.name}}</a></h4>
-    <p mat-line> {{folder.updated | date}} {{folder.updated | date:'shortTime'}} </p>    
+<div class="card-list">
+  <mat-card *ngFor="let folder of links">
+    <mat-card-header>
+    <mat-card-title mat-line matTooltip="{{folder.name}}" matTooltipPosition="above">
+      <a href="{{folder.link}}" target="_blank">{{folder.name}}</a>
+    </mat-card-title>
+    <mat-card-subtitle mat-line> {{folder.updated | date}} {{folder.updated | date:'shortTime'}} </mat-card-subtitle>    
     <br/>
-    <div class="tag" [ngClass]="folder.nsfw ? 'nsfw' : ''" label="Favorite">{{folder.tag}}</div>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-</mat-list>
+    </mat-card-header>
+    <mat-card-actions>
+      <div class="tag" [ngClass]="folder.nsfw ? 'nsfw' : ''" label="Favorite">{{folder.tag}}</div>
+    </mat-card-actions>
+  </mat-card>
+</div>
