@@ -13,7 +13,6 @@ import {  MatToolbarModule,
           MatButtonModule,
           MatSidenavModule,
           MatIconModule,
-          MatListModule,
           MatCardModule,
           MatTooltipModule
         } from '@angular/material';
@@ -37,7 +36,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule,
     MatCardModule,
     HttpClientModule,
     MatTooltipModule
